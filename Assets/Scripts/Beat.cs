@@ -25,7 +25,7 @@ public class Beat : MonoBehaviour {
 	
 	// Update is called once per frame
 	void Update () {
-		Debug.Log (comboTime);
+
 	}
 
 	IEnumerator Wait() {
@@ -38,7 +38,6 @@ public class Beat : MonoBehaviour {
 		comboTime = true;
 
 		counter++;
-//		Debug.Log (counter);
 
 		StartCoroutine (Show ());
 
