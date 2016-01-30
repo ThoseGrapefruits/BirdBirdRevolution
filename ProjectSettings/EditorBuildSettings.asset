@@ -9,3 +9,7 @@ EditorBuildSettings:
     path: Assets/Scenes/game_over.unity
   - enabled: 1
     path: Assets/Scenes/real_scene_pls_notice.unity
+  - enabled: 1
+    path: Assets/Scenes/Main_Menu.unity
+  - enabled: 1
+    path: Assets/Scenes/combo_list.unity
