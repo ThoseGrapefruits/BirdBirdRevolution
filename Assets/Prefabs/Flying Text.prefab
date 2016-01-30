@@ -63,7 +63,7 @@ TextMesh:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 170306}
-  m_Text: I CAN FLY
+  m_Text: LRL
   m_OffsetZ: 0
   m_CharacterSize: 0.1
   m_LineSpacing: 1
@@ -88,7 +88,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4cc1e60ecdf3545d8b7f8a2a3f1cc969, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  myString: Text
+  myString: ULR
   FADE_SPEED: 0.02
   FLY_SPEED: 0.01
 --- !u!1001 &100100000

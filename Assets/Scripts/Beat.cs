@@ -3,8 +3,12 @@ using System.Collections;
 
 public class Beat : MonoBehaviour {
 
-	public float WAIT_TIME;
-	public float SHOW_TIME;
+	private float WAIT_TIME;
+	private float SHOW_TIME;
+
+	public float LOW_THRESHOLD;
+	public float HI_THRESHOLD;
+
 	private float timer;
 
 	private int counter;
@@ -17,10 +21,7 @@ public class Beat : MonoBehaviour {
 	// Use this for initialization
 	void Start () {
 
-		float[] randomBeat = generateRandomBeat();
-
-		WAIT_TIME = randomBeat[0];
-		SHOW_TIME = randomBeat[1];
+		generateRandomBeat();
 
 		counter = 0;
 		comboTime = false;
@@ -69,14 +70,10 @@ public class Beat : MonoBehaviour {
 
 	/* Randomly generate a 2-element array where the first element is the wait time and the second
 	 * is the show time */
-	private float[] generateRandomBeat() {
+	private void generateRandomBeat() {
 
-		WAIT_TIME = Random.Range (0.4f, 0.8f);
+		WAIT_TIME = Random.Range (LOW_THRESHOLD, HI_THRESHOLD);
 		SHOW_TIME = WAIT_TIME / 2;
-
-		float[] result = {WAIT_TIME, SHOW_TIME};
-
-		return result;
 
 	}
 

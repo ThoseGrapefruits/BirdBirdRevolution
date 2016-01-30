@@ -134,6 +134,7 @@ public class PlayerController : MonoBehaviour
 		}
 
 		Instantiate(flyText);
+		flyText.GetComponent<FlyingText>().init();
 		flyText.GetComponent<FlyingText>().setText(combo, toPass);
 
     }

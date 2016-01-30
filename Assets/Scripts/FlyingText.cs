@@ -34,6 +34,14 @@ public class FlyingText : MonoBehaviour {
 	
 	}
 
+	public void init() {
+
+		myText = this.GetComponent<TextMesh>();
+
+		myText.text = myString;
+
+	}
+
 	public void setText(string toSet, Color newColor) {
 
 		myString = toSet;
