@@ -49,7 +49,7 @@ public class Hearts : MonoBehaviour {
 
 	public void loseOneLife() {
 
-
+		lives--;
 
 	}
 }
