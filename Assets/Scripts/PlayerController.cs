@@ -8,8 +8,8 @@ public class PlayerController : MonoBehaviour
     private GameObject theBeat;
 
     // Constants
-    private const int OFF_BEAT_COMBO = 5;
-    private const int ON_BEAT_COMBO = 10;
+    private const float POINTS_PER_MOVE = 3f;
+    private const float ON_BEAT_MULT = 2f;
     private const int MAX_COMBO_SIZE = 4;
 
     // Glob variables
@@ -29,6 +29,9 @@ public class PlayerController : MonoBehaviour
         combos.Add("Wavedash Right", "RRD");
         combos.Add("Wavedash Left", "LLD");
         combos.Add("Split", "DD");
+        combos.Add("Jump Split", "UUD");
+        combos.Add("Flip Right", "UURD");
+        combos.Add("Flip Left", "UULD");
 
         // Duh, count your current score
         score = 0;
@@ -63,7 +66,7 @@ public class PlayerController : MonoBehaviour
     private void AddMove(Move move)
     {
         activeCombo += move;
-        if(!CheckForCombo()&&activeCombo.Length>=MAX_COMBO_SIZE)
+        if (!CheckForCombo() && activeCombo.Length >= MAX_COMBO_SIZE)
         {
             ClearCombo();
         }
@@ -86,18 +89,19 @@ public class PlayerController : MonoBehaviour
     private void CompleteCombo(string combo)
     {
         Debug.Log(combo);
-
-        if (theBeat.GetComponent<Beat>().comboTime)
-        {
-            score += ON_BEAT_COMBO;
-        }
-        else {
-            score += OFF_BEAT_COMBO;
-        }
-
-        Debug.Log(score);
-
+        AddScoreFor(combo);
         ClearCombo();
+        Debug.Log(score);
+    }
+
+    private void AddScoreFor(string combo)
+    {
+        float scoreIncr = combo.Length * POINTS_PER_MOVE;
+        if(theBeat.GetComponent<Beat>().comboTime)
+        {
+            scoreIncr *= ON_BEAT_MULT;
+        }
+        score += (int)scoreIncr;
     }
 
     private void ClearCombo()
