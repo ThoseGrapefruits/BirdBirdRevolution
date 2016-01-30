@@ -503,7 +503,7 @@ TextMesh:
   m_GameObject: {fileID: 1176596250}
   m_Text: Test
   m_OffsetZ: 0
-  m_CharacterSize: 0.05
+  m_CharacterSize: 0.06
   m_LineSpacing: 1
   m_Anchor: 1
   m_Alignment: 1
