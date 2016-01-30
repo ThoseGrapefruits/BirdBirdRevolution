@@ -5,31 +5,31 @@ public class FlyingText : MonoBehaviour {
 
 	public string myString;
 
-	public float FADE_SPEED = 0.1f;
-	public float FLY_SPEED = 0.001f;
+	public float FADE_SPEED;
+	public float FLY_SPEED;
 
-	private Rigidbody2D myRigidbody;
 	private TextMesh myText;
+
+	private Vector3 myPos;
 
 	// Use this for initialization
 	void Start () {
 
-		myRigidbody = this.GetComponent<Rigidbody2D>();
 		myText = this.GetComponent<TextMesh>();
 
 		myText.text = myString;
-
-		Vector2 myVel = myRigidbody.velocity;
-		myVel.y = FLY_SPEED;
-		myRigidbody.velocity = myVel;
 	
 	}
 	
 	// Update is called once per frame
 	void Update () {
 
+		myPos = transform.position;
+		myPos.y += FLY_SPEED;
+		transform.position = myPos;
+
 		Color temp = myText.color;
-		temp.a -= 0.01f;
+		temp.a -= FADE_SPEED;
 		myText.color = temp;
 	
 	}
@@ -37,6 +37,8 @@ public class FlyingText : MonoBehaviour {
 	public void setText(string toSet, Color newColor) {
 
 		myString = toSet;
+
+		myText.color = newColor;
 
 	}
 }
