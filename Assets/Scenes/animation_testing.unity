@@ -665,7 +665,6 @@ GameObject:
   m_Component:
   - 4: {fileID: 2107177583}
   - 212: {fileID: 2107177582}
-  - 111: {fileID: 2107177585}
   - 95: {fileID: 2107177584}
   m_Layer: 0
   m_Name: MatchstickBody
@@ -730,7 +729,7 @@ Animator:
   m_GameObject: {fileID: 2107177581}
   m_Enabled: 1
   m_Avatar: {fileID: 0}
-  m_Controller: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: ca7d5438d2edf4921b3c1e85a429229e, type: 2}
   m_CullingMode: 0
   m_UpdateMode: 0
   m_ApplyRootMotion: 0
@@ -738,20 +737,6 @@ Animator:
   m_WarningMessage: 
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
---- !u!111 &2107177585
-Animation:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 2107177581}
-  m_Enabled: 1
-  serializedVersion: 3
-  m_Animation: {fileID: 0}
-  m_Animations: []
-  m_WrapMode: 0
-  m_PlayAutomatically: 1
-  m_AnimatePhysics: 0
-  m_CullingType: 0
 --- !u!1 &2130851176
 GameObject:
   m_ObjectHideFlags: 0
