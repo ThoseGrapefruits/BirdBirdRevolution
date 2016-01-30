@@ -7,7 +7,8 @@ public class PlayerController : MonoBehaviour
     [SerializeField]
     private GameObject theBeat;
 
-	[SerializeField] private GameObject flyText;
+    [SerializeField]
+    private GameObject flyText;
 
     [SerializeField]
     private GameObject ladyBirdComp;
@@ -21,9 +22,9 @@ public class PlayerController : MonoBehaviour
     // Glob variables
     public static int score;
 
-    private enum Move
+    public enum Move
     {
-        U = 'W', D = 'S', L = 'A', R = 'D'
+        U = 'U', D = 'D', L = 'L', R = 'R'
     };
 
     private enum ComboState
@@ -36,13 +37,13 @@ public class PlayerController : MonoBehaviour
 
     void Start()
     {
-        combos.Add("Twirl", "ADA");
-        combos.Add("Wavedash Right", "DDS");
-        combos.Add("Wavedash Left", "AAS");
-        combos.Add("Split", "SSS");
-        combos.Add("Jump Split", "WWS");
-        combos.Add("Flip Right", "WDS");
-        combos.Add("Flip Left", "WAS");
+        combos.Add("Twirl", "LRL");
+        combos.Add("Wavedash Right", "RRD");
+        combos.Add("Wavedash Left", "LLD");
+        combos.Add("Split", "DDD");
+        combos.Add("Jump Split", "UUD");
+        combos.Add("Flip Right", "URD");
+        combos.Add("Flip Left", "ULD");
 
         // Duh, count your current score
         score = 0;
@@ -74,12 +75,12 @@ public class PlayerController : MonoBehaviour
 
     private void AddMove(Move move)
     {
-        activeCombo += (char)move;
+        activeCombo += move;
         if (activeCombo.Length >= COMBO_SIZE && !CheckForCombo())
         {
             // If we're in here, the player hit a sequence of moves that wasn't a combo
             ladyBird.CompleteCombo(activeCombo); // Lady bird won't be happy
-			InstantiateComboText(ComboState.failed, activeCombo); // Make combo text
+            InstantiateComboText(ComboState.failed, activeCombo); // Make combo text
             ClearCombo();
         }
     }
@@ -115,24 +116,25 @@ public class PlayerController : MonoBehaviour
         score += (int)scoreIncr;
     }
 
-	private void InstantiateComboText(ComboState comboState, string combo)
+    private void InstantiateComboText(ComboState comboState, string combo)
     {
-		Color toPass = Color.white;
+        Color toPass = Color.white;
 
-		// Figure out what color the text will be
-		switch (comboState) {
-		case ComboState.sat:
-			toPass = Color.green;
-			break;
+        // Figure out what color the text will be
+        switch (comboState)
+        {
+            case ComboState.sat:
+                toPass = Color.green;
+                break;
 
-		case ComboState.failed:
-			toPass = Color.red;
-			break;
+            case ComboState.failed:
+                toPass = Color.red;
+                break;
 
-		case ComboState.unsat:
-			toPass = Color.red;
-			break;
-		}
+            case ComboState.unsat:
+                toPass = Color.red;
+                break;
+        }
 
         FlyingText text = Instantiate(flyText).GetComponent<FlyingText>();
         text.init();
