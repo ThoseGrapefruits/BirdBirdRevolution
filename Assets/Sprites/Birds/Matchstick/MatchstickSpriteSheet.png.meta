@@ -1,15 +1,15 @@
 fileFormatVersion: 2
 guid: 8eade28a80c5f4863a62842f7454a30a
-timeCreated: 1454130252
+timeCreated: 1454173446
 licenseType: Free
 TextureImporter:
   fileIDToRecycleName:
-    21300000: MatchstickSpriteSheet_0
-    21300002: MatchstickSpriteSheet_1
-    21300004: MatchstickSpriteSheet_2
-    21300006: MatchstickSpriteSheet_3
-    21300008: MatchstickSpriteSheet_4
-    21300010: MatchstickSpriteSheet_5
+    21300000: MatchstickThigh
+    21300002: MatchstickBody
+    21300004: MatchstickHead
+    21300006: MatchstickKnee
+    21300008: MatchstickLeg
+    21300010: MatchstickWing
   serializedVersion: 2
   mipmaps:
     mipMapMode: 0
@@ -35,7 +35,7 @@ TextureImporter:
   textureFormat: -1
   maxTextureSize: 2048
   textureSettings:
-    filterMode: -1
+    filterMode: 1
     aniso: 16
     mipBias: -1
     wrapMode: 1
@@ -56,7 +56,7 @@ TextureImporter:
   buildTargetSettings: []
   spriteSheet:
     sprites:
-    - name: MatchstickSpriteSheet_0
+    - name: MatchstickThigh
       rect:
         serializedVersion: 2
         x: 51
@@ -67,7 +67,7 @@ TextureImporter:
       pivot: {x: 0.5, y: 1.1}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
-    - name: MatchstickSpriteSheet_1
+    - name: MatchstickBody
       rect:
         serializedVersion: 2
         x: 146
@@ -75,14 +75,14 @@ TextureImporter:
         width: 325
         height: 436
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline:
       - - {x: -162.5, y: 218}
         - {x: -162.5, y: -218}
         - {x: 162.5, y: -218}
         - {x: 162.5, y: 218}
-    - name: MatchstickSpriteSheet_2
+    - name: MatchstickHead
       rect:
         serializedVersion: 2
         x: 508
@@ -118,10 +118,10 @@ TextureImporter:
         - {x: 65.04382, y: -27.721436}
         - {x: 65.04382, y: 183.27856}
         - {x: 70.04382, y: 189.27856}
-    - name: MatchstickSpriteSheet_3
+    - name: MatchstickKnee
       rect:
         serializedVersion: 2
-        x: 35
+        x: 37
         y: 283
         width: 57
         height: 55
@@ -130,14 +130,13 @@ TextureImporter:
       border: {x: 0, y: 0, z: 0, w: 0}
       outline:
       - - {x: -21.5, y: 27.5}
-        - {x: -28.5, y: 20.5}
-        - {x: -28.5, y: -15.5}
-        - {x: -23.5, y: -27.5}
-        - {x: 21.5, y: -27.5}
-        - {x: 28.5, y: -21.5}
-        - {x: 28.5, y: 18.5}
-        - {x: 22.5, y: 27.5}
-    - name: MatchstickSpriteSheet_4
+        - {x: -28.5, y: 25.5}
+        - {x: -28.5, y: -26.5}
+        - {x: -27.5, y: -27.5}
+        - {x: 19.5, y: -27.5}
+        - {x: 27.5, y: -23.5}
+        - {x: 27.5, y: 27.5}
+    - name: MatchstickLeg
       rect:
         serializedVersion: 2
         x: 47
@@ -154,40 +153,40 @@ TextureImporter:
         - {x: 16.5, y: -237.6}
         - {x: 16.5, y: -67.600006}
         - {x: 15.5, y: -21.600006}
-    - name: MatchstickSpriteSheet_5
+    - name: MatchstickWing
       rect:
         serializedVersion: 2
         x: 126
         y: 60
         width: 411
         height: 216
-      alignment: 0
-      pivot: {x: 0, y: 0}
+      alignment: 9
+      pivot: {x: 0.14, y: 0.43}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline:
-      - - {x: 165.5, y: -68}
-        - {x: 163.5, y: -59}
-        - {x: 158.5, y: -56}
-        - {x: 205.5, y: -21}
-        - {x: 205.5, y: -15}
-        - {x: 201.5, y: -12}
-        - {x: 141.5, y: 54}
-        - {x: 156.5, y: 80}
-        - {x: 163.5, y: 99}
-        - {x: 162.5, y: 108}
-        - {x: 146.5, y: 108}
-        - {x: 40.5, y: 83}
-        - {x: -83.5, y: 75}
-        - {x: -157.5, y: 96}
-        - {x: -175.5, y: 87}
-        - {x: -205.5, y: 65}
-        - {x: -205.5, y: -69}
-        - {x: -195.5, y: -96}
-        - {x: -168.5, y: -108}
-        - {x: -109.5, y: -108}
-        - {x: -44.5, y: -75}
-        - {x: 9.5, y: -94}
-        - {x: 75.5, y: -91}
+      - - {x: 313.46, y: -52.880005}
+        - {x: 311.46, y: -43.880005}
+        - {x: 306.46, y: -40.880005}
+        - {x: 353.46, y: -5.880005}
+        - {x: 353.46, y: 0.11999512}
+        - {x: 349.46, y: 3.119995}
+        - {x: 289.46, y: 69.119995}
+        - {x: 304.46, y: 95.119995}
+        - {x: 311.46, y: 114.119995}
+        - {x: 310.46, y: 123.119995}
+        - {x: 294.46, y: 123.119995}
+        - {x: 188.45999, y: 98.119995}
+        - {x: 64.45999, y: 90.119995}
+        - {x: -9.540009, y: 111.119995}
+        - {x: -27.540009, y: 102.119995}
+        - {x: -57.54001, y: 80.119995}
+        - {x: -57.54001, y: -53.880005}
+        - {x: -47.54001, y: -80.880005}
+        - {x: -20.540009, y: -92.880005}
+        - {x: 38.45999, y: -92.880005}
+        - {x: 103.45999, y: -59.880005}
+        - {x: 157.45999, y: -78.880005}
+        - {x: 223.45999, y: -75.880005}
     outline: []
   spritePackingTag: 
   userData: 
