@@ -23,7 +23,7 @@ public class ComboDisplay : MonoBehaviour {
 	// Update is called once per frame
 	void Update () {
 
-		textComp.text = "Combo: " + playerComp.GetActiveCombo();
+		textComp.text = playerComp.GetActiveCombo();
 
 
 	
