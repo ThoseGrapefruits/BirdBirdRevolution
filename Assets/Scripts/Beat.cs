@@ -14,8 +14,14 @@ public class Beat : MonoBehaviour {
 	// Use this for initialization
 	void Start () {
 
-//		WAIT_TIME = 0.5f;
-//		SHOW_TIME = 0.5f;
+		float[] randomBeat = generateRandomBeat();
+
+		WAIT_TIME = randomBeat[0];
+		SHOW_TIME = randomBeat[1];
+
+		Debug.Log (randomBeat[0]);
+		Debug.Log (randomBeat[1]);
+
 		counter = 0;
 		comboTime = false;
 
@@ -55,4 +61,18 @@ public class Beat : MonoBehaviour {
 		StartCoroutine (Wait ());
 
 	}
+
+	/* Randomly generate a 2-element array where the first element is the wait time and the second
+	 * is the show time */
+	private float[] generateRandomBeat() {
+
+		WAIT_TIME = Random.Range (0.5f, 0.8f);
+		SHOW_TIME = WAIT_TIME / 2;
+
+		float[] result = {WAIT_TIME, SHOW_TIME};
+
+		return result;
+
+	}
+
 }
