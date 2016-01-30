@@ -13,6 +13,7 @@ public class LadyBirdController : MonoBehaviour
     private Hearts hearts;
 
     private string desiredCombo;
+    private int lastDesiredComboIndex = -1;
 
     void Start()
     {
@@ -22,7 +23,7 @@ public class LadyBirdController : MonoBehaviour
 
     void Update()
     {
-        if(desiredCombo == null)
+        if (desiredCombo == null)
         {
             CreateNewCombo();
         }
@@ -39,8 +40,10 @@ public class LadyBirdController : MonoBehaviour
 
     private void CreateNewCombo()
     {
-        int randIndex = (int)Random.value * player.combos.Count;
+        int randIndex;
+        while ((randIndex = (int)(Random.value * player.combos.Count)) == lastDesiredComboIndex) ;
         desiredCombo = (string)new ArrayList(player.combos.Values)[randIndex];
+        lastDesiredComboIndex = randIndex;
     }
 
     public string GetDesiredCombo()
