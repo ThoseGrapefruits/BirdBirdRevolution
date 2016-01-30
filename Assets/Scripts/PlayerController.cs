@@ -15,8 +15,7 @@ public class PlayerController : MonoBehaviour
     private LadyBirdController ladyBird;
 
     // Constants
-    private const float POINTS_PER_MOVE = 3f;
-    private const float ON_BEAT_MULT = 2f;
+    private const int POINTS_PER_COMBO = 9;
     private const int COMBO_SIZE = 3;
 
     // Glob variables
@@ -69,31 +68,25 @@ public class PlayerController : MonoBehaviour
         {
             AddMove(Move.R);
         }
-
-        CheckForCombo();
     }
 
     private void AddMove(Move move)
     {
         activeCombo += move;
-        if (activeCombo.Length >= COMBO_SIZE && !CheckForCombo())
+        if (activeCombo.Length >= COMBO_SIZE)
         {
-            // If we're in here, the player hit a sequence of moves that wasn't a combo
-            ladyBird.CompleteCombo(activeCombo); // Lady bird won't be happy
-            InstantiateComboText(ComboState.failed, activeCombo); // Make combo text
-            ClearCombo();
+            CompleteCombo(activeCombo);
         }
     }
 
-    private bool CheckForCombo()
+    private bool ValidCombo()
     {
         foreach (string combo in combos.Values)
         {
             // If this combo matches the active combo
             if (combo.Equals(activeCombo))
             {
-                CompleteCombo(combo); // We made it boys
-                return true;
+                return true; // We made it boys
             }
         }
         return false;
@@ -101,41 +94,35 @@ public class PlayerController : MonoBehaviour
 
     private void CompleteCombo(string combo)
     {
-        AddScoreFor(combo);
-        InstantiateComboText(ladyBird.CompleteCombo(combo) ? ComboState.sat : ComboState.unsat, combo); // Make combo text
+        bool realCombo = ValidCombo();
+        bool ladyHappy = ladyBird.CompleteCombo(combo);
+        bool onBeat = theBeat.GetComponent<Beat>().comboTime;
+        if (realCombo && ladyHappy && onBeat)
+        {
+            AddScoreFor(combo);
+            InstantiateComboText(true, combo); // Make combo text
+        }
+        else
+        {
+            SubScoreFor(combo);
+            InstantiateComboText(false, activeCombo); // Make combo text
+        }
         ClearCombo();
     }
 
     private void AddScoreFor(string combo)
     {
-        float scoreIncr = combo.Length * POINTS_PER_MOVE;
-        if (theBeat.GetComponent<Beat>().comboTime)
-        {
-            scoreIncr *= ON_BEAT_MULT;
-        }
-        score += (int)scoreIncr;
+        score += POINTS_PER_COMBO;
     }
 
-    private void InstantiateComboText(ComboState comboState, string combo)
+    private void SubScoreFor(string combo)
     {
-        Color toPass = Color.white;
+        score -= POINTS_PER_COMBO;
+    }
 
-        // Figure out what color the text will be
-        switch (comboState)
-        {
-            case ComboState.sat:
-                toPass = Color.green;
-                break;
-
-            case ComboState.failed:
-                toPass = Color.red;
-                break;
-
-            case ComboState.unsat:
-                toPass = Color.red;
-                break;
-        }
-
+    private void InstantiateComboText(bool success, string combo)
+    {
+        Color toPass = success ? Color.green : Color.red;
         FlyingText text = Instantiate(flyText).GetComponent<FlyingText>();
         text.init();
         text.setText(combo, toPass);
