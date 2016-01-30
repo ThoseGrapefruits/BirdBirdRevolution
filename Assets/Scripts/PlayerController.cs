@@ -94,9 +94,9 @@ public class PlayerController : MonoBehaviour
 
     private void CompleteCombo(string combo)
     {
+        ladyBird.CompleteCombo(combo);
         AddScoreFor(combo);
         ClearCombo();
-        ladyBird.CompleteCombo(combo);
     }
 
     private void AddScoreFor(string combo)

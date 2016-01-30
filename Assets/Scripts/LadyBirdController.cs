@@ -29,13 +29,15 @@ public class LadyBirdController : MonoBehaviour
         }
     }
 
-    public void CompleteCombo(string combo)
+    public bool CompleteCombo(string combo)
     {
-        if (!combo.Equals(desiredCombo))
+        bool satisfied = combo.Equals(desiredCombo);
+        if (!satisfied)
         {
             hearts.loseOneLife();
         }
         CreateNewCombo();
+        return satisfied;
     }
 
     private void CreateNewCombo()
