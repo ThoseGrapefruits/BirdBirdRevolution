@@ -18,12 +18,14 @@ public class LadyBirdController : MonoBehaviour
     {
         player = playerComp.GetComponent<PlayerController>();
         hearts = heartsComp.GetComponent<Hearts>();
-        CreateNewCombo();
     }
 
     void Update()
     {
-
+        if(desiredCombo == null)
+        {
+            CreateNewCombo();
+        }
     }
 
     public void CompleteCombo(string combo)
@@ -37,7 +39,8 @@ public class LadyBirdController : MonoBehaviour
 
     private void CreateNewCombo()
     {
-        desiredCombo = (string)new ArrayList(player.combos.Values)[(int)(Random.value * player.combos.Count)];
+        int randIndex = (int)Random.value * player.combos.Count;
+        desiredCombo = (string)new ArrayList(player.combos.Values)[randIndex];
     }
 
     public string GetDesiredCombo()
