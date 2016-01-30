@@ -16,7 +16,7 @@ public class PlayerController : MonoBehaviour
     // Constants
     private const float POINTS_PER_MOVE = 3f;
     private const float ON_BEAT_MULT = 2f;
-    private const int MAX_COMBO_SIZE = 3;
+    private const int COMBO_SIZE = 3;
 
     // Glob variables
     public int score;
@@ -75,8 +75,9 @@ public class PlayerController : MonoBehaviour
     private void AddMove(Move move)
     {
         activeCombo += move;
-        if (!CheckForCombo() && activeCombo.Length >= MAX_COMBO_SIZE)
+        if (activeCombo.Length >= COMBO_SIZE && !CheckForCombo())
         {
+            // If we're in here, the player hit a sequence of moves that wasn't a combo
             ladyBird.CompleteCombo(activeCombo); // Lady bird won't be happy
 			InstantiateComboText(ComboState.failed, activeCombo); // Make combo text
             ClearCombo();
@@ -116,9 +117,6 @@ public class PlayerController : MonoBehaviour
 
 	private void InstantiateComboText(ComboState comboState, string combo)
     {
-
-		Debug.Log(comboState);
-
 		Color toPass = Color.white;
 
 		// Figure out what color the text will be
@@ -136,10 +134,9 @@ public class PlayerController : MonoBehaviour
 			break;
 		}
 
-		Instantiate(flyText);
-		flyText.GetComponent<FlyingText>().init();
-		flyText.GetComponent<FlyingText>().setText(combo, toPass);
-
+        FlyingText text = Instantiate(flyText).GetComponent<FlyingText>();
+        text.init();
+        text.setText(combo, toPass);
     }
 
     private void ClearCombo()

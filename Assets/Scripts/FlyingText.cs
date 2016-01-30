@@ -3,8 +3,6 @@ using System.Collections;
 
 public class FlyingText : MonoBehaviour {
 
-	public string myString;
-
 	public float FADE_SPEED;
 	public float FLY_SPEED;
 
@@ -14,11 +12,7 @@ public class FlyingText : MonoBehaviour {
 
 	// Use this for initialization
 	void Start () {
-
-		myText = this.GetComponent<TextMesh>();
-
-		myText.text = myString;
-	
+		myText = GetComponent<TextMesh>();
 	}
 	
 	// Update is called once per frame
@@ -31,22 +25,19 @@ public class FlyingText : MonoBehaviour {
 		Color temp = myText.color;
 		temp.a -= FADE_SPEED;
 		myText.color = temp;
-	
+
+        if(temp.a <= 0)
+        {
+            Destroy(gameObject);
+        }
 	}
 
 	public void init() {
-
-		myText = this.GetComponent<TextMesh>();
-
-		myText.text = myString;
-
+		myText = GetComponent<TextMesh>();
 	}
 
 	public void setText(string toSet, Color newColor) {
-
-		myString = toSet;
-
+		myText.text = toSet;
 		myText.color = newColor;
-
 	}
 }
