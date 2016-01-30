@@ -235,6 +235,7 @@ GameObject:
   m_Component:
   - 4: {fileID: 1239637626}
   - 212: {fileID: 1239637625}
+  - 114: {fileID: 1239637627}
   m_Layer: 0
   m_Name: PlayerBird
   m_TagString: Untagged
@@ -280,6 +281,18 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 1
+--- !u!114 &1239637627
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1239637624}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 208b7ce9d6187254d9acd07d53986d3d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  theBeat: {fileID: 1488445554}
 --- !u!1 &1488445554
 GameObject:
   m_ObjectHideFlags: 0
@@ -348,6 +361,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   WAIT_TIME: .5
   SHOW_TIME: .5
+  comboTime: 0
 --- !u!1 &1669706814
 GameObject:
   m_ObjectHideFlags: 0

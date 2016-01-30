@@ -4,6 +4,8 @@ using System.Collections.Generic;
 public class PlayerController : MonoBehaviour
 {
 
+	[SerializeField] private GameObject theBeat;
+
     private enum Move
     {
         U = 'U', D = 'D', L = 'L', R = 'R'
