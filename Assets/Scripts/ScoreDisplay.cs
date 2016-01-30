@@ -17,7 +17,7 @@ public class ScoreDisplay : MonoBehaviour {
 	// Update is called once per frame
 	void Update () {
 
-		this.GetComponent<TextMesh>().text = p.score.ToString();
+		this.GetComponent<TextMesh>().text = "Score: " + p.score.ToString();
 	
 	}
 }
