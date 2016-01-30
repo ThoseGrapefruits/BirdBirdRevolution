@@ -24,6 +24,11 @@ public class PlayerController : MonoBehaviour
         U = 'U', D = 'D', L = 'L', R = 'R'
     };
 
+    private enum ComboState
+    {
+        sat, unsat, failed
+    };
+
     public SortedDictionary<string, string> combos = new SortedDictionary<string, string>();
     private string activeCombo = "";
 
@@ -70,6 +75,8 @@ public class PlayerController : MonoBehaviour
         activeCombo += move;
         if (!CheckForCombo() && activeCombo.Length >= MAX_COMBO_SIZE)
         {
+            ladyBird.CompleteCombo(activeCombo); // Lady bird won't be happy
+            InstantiateComboText(ComboState.failed); // Make combo text
             ClearCombo();
         }
     }
@@ -91,6 +98,7 @@ public class PlayerController : MonoBehaviour
     private void CompleteCombo(string combo)
     {
         AddScoreFor(combo);
+        InstantiateComboText(ladyBird.CompleteCombo(combo) ? ComboState.sat : ComboState.unsat); // Make combo text
         ClearCombo();
     }
 
@@ -104,9 +112,13 @@ public class PlayerController : MonoBehaviour
         score += (int)scoreIncr;
     }
 
+    private void InstantiateComboText(ComboState comboState)
+    {
+        // JACK DO THIS
+    }
+
     private void ClearCombo()
     {
-        ladyBird.CompleteCombo(activeCombo); // Lady bird has to check everything
         activeCombo = "";
     }
 
