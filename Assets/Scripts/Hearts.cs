@@ -13,7 +13,7 @@ public class Hearts : MonoBehaviour {
 	private SpriteRenderer render;
 
 	private int lives;
-	private GameObject[] heartList;
+	private GameObject[] heartList = new GameObject[3];
 
 	// Use this for initialization
 	void Start () {

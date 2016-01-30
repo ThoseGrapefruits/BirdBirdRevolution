@@ -22,9 +22,6 @@ public class Beat : MonoBehaviour {
 		WAIT_TIME = randomBeat[0];
 		SHOW_TIME = randomBeat[1];
 
-		Debug.Log (randomBeat[0]);
-		Debug.Log (randomBeat[1]);
-
 		counter = 0;
 		comboTime = false;
 
