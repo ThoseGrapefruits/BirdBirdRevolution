@@ -12,7 +12,7 @@ public class GameOver : MonoBehaviour
     {
 		myText = this.GetComponent<TextMesh>();
 
-		myText.text = "~~~Game Over~~~\n ~Press R to try again~\nScore: " + PlayerController.score;
+		myText.text = "Game Over\nPress R to try again\nScore: " + PlayerController.score;
     }
 
     // Update is called once per frame
