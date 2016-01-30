@@ -14,7 +14,7 @@ public class PlayerController : MonoBehaviour
     // Constants
     private const float POINTS_PER_MOVE = 3f;
     private const float ON_BEAT_MULT = 2f;
-    private const int MAX_COMBO_SIZE = 4;
+    private const int MAX_COMBO_SIZE = 3;
 
     // Glob variables
     public int score;
@@ -34,13 +34,13 @@ public class PlayerController : MonoBehaviour
 
     void Start()
     {
-        combos.Add("Twirl", "LRLR");
+        combos.Add("Twirl", "LRL");
         combos.Add("Wavedash Right", "RRD");
         combos.Add("Wavedash Left", "LLD");
-        combos.Add("Split", "DD");
+        combos.Add("Split", "DDD");
         combos.Add("Jump Split", "UUD");
-        combos.Add("Flip Right", "UURD");
-        combos.Add("Flip Left", "UULD");
+        combos.Add("Flip Right", "URD");
+        combos.Add("Flip Left", "ULD");
 
         // Duh, count your current score
         score = 0;
