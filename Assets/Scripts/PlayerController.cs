@@ -116,6 +116,9 @@ public class PlayerController : MonoBehaviour
 
 	private void InstantiateComboText(ComboState comboState, string combo)
     {
+
+		Debug.Log(comboState);
+
 		Color toPass = Color.white;
 
 		// Figure out what color the text will be
@@ -125,7 +128,7 @@ public class PlayerController : MonoBehaviour
 			break;
 
 		case ComboState.failed:
-			toPass = Color.white;
+			toPass = Color.red;
 			break;
 
 		case ComboState.unsat:
