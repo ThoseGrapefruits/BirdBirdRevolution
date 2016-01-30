@@ -10,7 +10,7 @@ public class LadyBirdController : MonoBehaviour
 
     [SerializeField]
     private GameObject heartsComp;
-    private Hearts hears;
+    private Hearts hearts;
 
     private string desiredCombo;
 
@@ -29,7 +29,7 @@ public class LadyBirdController : MonoBehaviour
     {
         if (!combo.Equals(desiredCombo))
         {
-            heartsComp.loseOneLife();
+            hearts.loseOneLife();
         }
         CreateNewCombo();
     }
