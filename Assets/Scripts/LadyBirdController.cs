@@ -41,9 +41,12 @@ public class LadyBirdController : MonoBehaviour
     private void CreateNewCombo()
     {
         int randIndex;
+
+        // This makes sure it doesn't pick the same combo as last time
         while ((randIndex = (int)(Random.value * player.combos.Count)) == lastDesiredComboIndex) ;
-        desiredCombo = (string)new ArrayList(player.combos.Values)[randIndex];
         lastDesiredComboIndex = randIndex;
+
+        desiredCombo = (string)new ArrayList(player.combos.Values)[randIndex];
     }
 
     public string GetDesiredCombo()
