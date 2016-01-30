@@ -3,30 +3,52 @@ using System.Collections;
 
 public class Beat : MonoBehaviour {
 
-	private float TIME;
+	private float WAIT_TIME;
+	private float SHOW_TIME;
 	private float timer;
+
+	private int counter;
 
 	// Use this for initialization
 	void Start () {
 
-		TIME = 3;
+		WAIT_TIME = 0.5f;
+		SHOW_TIME = 0.5f;
+		counter = 0;
+
+		StartCoroutine (Wait());
 	
 	}
 	
 	// Update is called once per frame
 	void Update () {
-
-		StartCoroutine (Countdown());
 	
 	}
 
-	IEnumerator Countdown() {
+	IEnumerator Wait() {
 
-		for (timer = TIME; timer >= 0; timer -= Time.deltaTime) {
+		for (timer = WAIT_TIME; timer >= 0; timer -= Time.deltaTime) {
 			yield return 0;
 		}
 
-		Debug.Log ("derpderpderp");
+		this.GetComponent<SpriteRenderer>().enabled = true;
+
+		counter++;
+		Debug.Log (counter);
+
+		StartCoroutine (Show ());
+
+	}
+
+	IEnumerator Show() {
+
+		for (timer = SHOW_TIME; timer >= 0; timer -= Time.deltaTime) {
+			yield return 0;
+		}
+
+		this.GetComponent<SpriteRenderer>().enabled = false;
+
+		StartCoroutine (Wait ());
 
 	}
 }
