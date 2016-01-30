@@ -23,7 +23,7 @@ public class PlayerController : MonoBehaviour
 
     private enum Move
     {
-        U = 'U', D = 'D', L = 'L', R = 'R'
+        U = 'W', D = 'S', L = 'A', R = 'D'
     };
 
     private enum ComboState
@@ -36,13 +36,13 @@ public class PlayerController : MonoBehaviour
 
     void Start()
     {
-        combos.Add("Twirl", "LRL");
-        combos.Add("Wavedash Right", "RRD");
-        combos.Add("Wavedash Left", "LLD");
-        combos.Add("Split", "DDD");
-        combos.Add("Jump Split", "UUD");
-        combos.Add("Flip Right", "URD");
-        combos.Add("Flip Left", "ULD");
+        combos.Add("Twirl", "ADA");
+        combos.Add("Wavedash Right", "DDS");
+        combos.Add("Wavedash Left", "AAS");
+        combos.Add("Split", "SSS");
+        combos.Add("Jump Split", "WWS");
+        combos.Add("Flip Right", "WDS");
+        combos.Add("Flip Left", "WAS");
 
         // Duh, count your current score
         score = 0;
@@ -74,7 +74,7 @@ public class PlayerController : MonoBehaviour
 
     private void AddMove(Move move)
     {
-        activeCombo += move;
+        activeCombo += (char)move;
         if (activeCombo.Length >= COMBO_SIZE && !CheckForCombo())
         {
             // If we're in here, the player hit a sequence of moves that wasn't a combo
