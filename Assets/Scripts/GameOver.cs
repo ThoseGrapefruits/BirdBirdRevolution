@@ -5,10 +5,14 @@ using UnityEngine.SceneManagement;
 public class GameOver : MonoBehaviour
 {
 
+	private TextMesh myText;
+
     // Use this for initialization
     void Start()
     {
-        
+		myText = this.GetComponent<TextMesh>();
+
+		myText.text = "~~~Game Over~~~\n ~Press R to try again~\nScore: " + PlayerController.score;
     }
 
     // Update is called once per frame
