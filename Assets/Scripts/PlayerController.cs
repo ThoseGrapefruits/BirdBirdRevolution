@@ -3,8 +3,15 @@ using System.Collections.Generic;
 
 public class PlayerController : MonoBehaviour
 {
-
+	// Store an instance of a beat object
 	[SerializeField] private GameObject theBeat;
+
+	// Constants
+	private int OFF_BEAT_COMBO;
+	private int ON_BEAT_COMBO;
+	
+	// Glob variables
+	public int score;
 
     private enum Move
     {
@@ -20,6 +27,14 @@ public class PlayerController : MonoBehaviour
         combos.Add("Wavedash Right", "RRD");
         combos.Add("Wavedash Left", "LLD");
         combos.Add("Split", "DD");
+
+		// You get 5 points for landing a combo off-beat (subject to changes)
+		// You get 10 points for landing a combo on-beat (subject to changes)
+		OFF_BEAT_COMBO = 5;
+		ON_BEAT_COMBO = 10;
+
+		// Duh, count your current score
+		score = 0;
     }
 
     void Update()
@@ -82,7 +97,16 @@ public class PlayerController : MonoBehaviour
 
     private void CompleteCombo(string combo)
     {
-        Debug.Log(combo);
+        //Debug.Log(combo);
+
+		if (theBeat.GetComponent<Beat>().comboTime) {
+			score += ON_BEAT_COMBO;
+		} else {
+			score += OFF_BEAT_COMBO;
+		}
+
+		Debug.Log (score);
+
         ClearCombo();
     }
 
