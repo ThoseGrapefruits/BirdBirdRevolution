@@ -7,14 +7,16 @@ public class ComboDisplay : MonoBehaviour {
 	// Keep a reference to the burd
 	[SerializeField] private GameObject theBird;
 
-	private Text textComp;
+	private TextMesh textComp;
 	private PlayerController playerComp;
+	private Transform theBirdTrans;
 
 	// Use this for initialization
 	void Start () {
 	
-		textComp = GetComponent<Text>();
+		textComp = GetComponent<TextMesh>();
 		playerComp = theBird.GetComponent<PlayerController>();
+		theBirdTrans = theBird.GetComponent<Transform>();
 
 	}
 	
@@ -22,6 +24,8 @@ public class ComboDisplay : MonoBehaviour {
 	void Update () {
 
 		textComp.text = "Combo: " + playerComp.GetActiveCombo();
+
+
 	
 	}
 }
