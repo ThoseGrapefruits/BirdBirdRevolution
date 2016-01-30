@@ -475,6 +475,7 @@ GameObject:
   - 4: {fileID: 1176596251}
   - 23: {fileID: 1176596253}
   - 102: {fileID: 1176596252}
+  - 114: {fileID: 1176596254}
   m_Layer: 0
   m_Name: ThoughtText
   m_TagString: Untagged
@@ -541,6 +542,18 @@ MeshRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingOrder: 0
+--- !u!114 &1176596254
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1176596250}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c7adeb83611884d65a8372b29e412b26, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  ladyBird: {fileID: 1669706814}
 --- !u!1 &1212860079
 GameObject:
   m_ObjectHideFlags: 0
