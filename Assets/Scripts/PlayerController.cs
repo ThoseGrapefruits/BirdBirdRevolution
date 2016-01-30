@@ -20,7 +20,7 @@ public class PlayerController : MonoBehaviour
         U = 'U', D = 'D', L = 'L', R = 'R'
     };
 
-    private Dictionary<string, string> combos = new Dictionary<string, string>();
+    public SortedDictionary<string, string> combos = new SortedDictionary<string, string>();
     private string activeCombo = "";
 
     void Start()
@@ -97,7 +97,7 @@ public class PlayerController : MonoBehaviour
     private void AddScoreFor(string combo)
     {
         float scoreIncr = combo.Length * POINTS_PER_MOVE;
-        if(theBeat.GetComponent<Beat>().comboTime)
+        if (theBeat.GetComponent<Beat>().comboTime)
         {
             scoreIncr *= ON_BEAT_MULT;
         }
