@@ -7,6 +7,10 @@ public class PlayerController : MonoBehaviour
     [SerializeField]
     private GameObject theBeat;
 
+    [SerializeField]
+    private GameObject ladyBirdComp;
+    private LadyBirdController ladyBird;
+
     // Constants
     private const float POINTS_PER_MOVE = 3f;
     private const float ON_BEAT_MULT = 2f;
@@ -35,6 +39,8 @@ public class PlayerController : MonoBehaviour
 
         // Duh, count your current score
         score = 0;
+
+        ladyBird = ladyBirdComp.GetComponent<LadyBirdController>();
     }
 
     void Update()
@@ -88,10 +94,9 @@ public class PlayerController : MonoBehaviour
 
     private void CompleteCombo(string combo)
     {
-        Debug.Log(combo);
         AddScoreFor(combo);
         ClearCombo();
-        Debug.Log(score);
+        ladyBird.CompleteCombo(combo);
     }
 
     private void AddScoreFor(string combo)
@@ -107,7 +112,6 @@ public class PlayerController : MonoBehaviour
     private void ClearCombo()
     {
         activeCombo = "";
-        Debug.Log("Clearing combo");
     }
 
     public string GetActiveCombo()

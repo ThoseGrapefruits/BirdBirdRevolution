@@ -18,6 +18,7 @@ public class LadyBirdController : MonoBehaviour
     {
         player = playerComp.GetComponent<PlayerController>();
         hearts = heartsComp.GetComponent<Hearts>();
+        CreateNewCombo();
     }
 
     void Update()
