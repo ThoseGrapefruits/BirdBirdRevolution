@@ -9,14 +9,12 @@ public class ComboDisplay : MonoBehaviour {
 
 	private TextMesh textComp;
 	private PlayerController playerComp;
-	private Transform theBirdTrans;
 
 	// Use this for initialization
 	void Start () {
 	
 		textComp = GetComponent<TextMesh>();
 		playerComp = theBird.GetComponent<PlayerController>();
-		theBirdTrans = theBird.GetComponent<Transform>();
 
 	}
 	
@@ -24,8 +22,6 @@ public class ComboDisplay : MonoBehaviour {
 	void Update () {
 
 		textComp.text = playerComp.GetActiveCombo();
-
-
 	
 	}
 }
