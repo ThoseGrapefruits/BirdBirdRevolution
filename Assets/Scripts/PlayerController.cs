@@ -61,10 +61,6 @@ public class PlayerController : MonoBehaviour
         {
             AddMove(Move.R);
         }
-        if (Input.GetKey(KeyCode.Space))
-        {
-            ClearCombo();
-        }
 
         CheckForCombo();
     }
@@ -94,7 +90,6 @@ public class PlayerController : MonoBehaviour
 
     private void CompleteCombo(string combo)
     {
-        ladyBird.CompleteCombo(combo);
         AddScoreFor(combo);
         ClearCombo();
     }
@@ -111,6 +106,7 @@ public class PlayerController : MonoBehaviour
 
     private void ClearCombo()
     {
+        ladyBird.CompleteCombo(activeCombo); // Lady bird has to check everything
         activeCombo = "";
     }
 
