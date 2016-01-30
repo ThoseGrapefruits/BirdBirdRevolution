@@ -7,6 +7,8 @@ public class PlayerController : MonoBehaviour
     [SerializeField]
     private GameObject theBeat;
 
+	[SerializeField] private GameObject flyText;
+
     [SerializeField]
     private GameObject ladyBirdComp;
     private LadyBirdController ladyBird;
@@ -76,7 +78,7 @@ public class PlayerController : MonoBehaviour
         if (!CheckForCombo() && activeCombo.Length >= MAX_COMBO_SIZE)
         {
             ladyBird.CompleteCombo(activeCombo); // Lady bird won't be happy
-            InstantiateComboText(ComboState.failed); // Make combo text
+			InstantiateComboText(ComboState.failed, activeCombo); // Make combo text
             ClearCombo();
         }
     }
@@ -98,7 +100,7 @@ public class PlayerController : MonoBehaviour
     private void CompleteCombo(string combo)
     {
         AddScoreFor(combo);
-        InstantiateComboText(ladyBird.CompleteCombo(combo) ? ComboState.sat : ComboState.unsat); // Make combo text
+        InstantiateComboText(ladyBird.CompleteCombo(combo) ? ComboState.sat : ComboState.unsat, combo); // Make combo text
         ClearCombo();
     }
 
@@ -112,9 +114,28 @@ public class PlayerController : MonoBehaviour
         score += (int)scoreIncr;
     }
 
-    private void InstantiateComboText(ComboState comboState)
+	private void InstantiateComboText(ComboState comboState, string combo)
     {
-        // JACK DO THIS
+		Color toPass = Color.white;
+
+		// Figure out what color the text will be
+		switch (comboState) {
+		case ComboState.sat:
+			toPass = Color.green;
+			break;
+
+		case ComboState.failed:
+			toPass = Color.white;
+			break;
+
+		case ComboState.unsat:
+			toPass = Color.red;
+			break;
+		}
+
+		Instantiate(flyText);
+		flyText.GetComponent<FlyingText>().setText(combo, toPass);
+
     }
 
     private void ClearCombo()
