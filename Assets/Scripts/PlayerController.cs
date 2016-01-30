@@ -19,7 +19,7 @@ public class PlayerController : MonoBehaviour
     private const int COMBO_SIZE = 3;
 
     // Glob variables
-    public int score;
+    public static int score;
 
     private enum Move
     {
