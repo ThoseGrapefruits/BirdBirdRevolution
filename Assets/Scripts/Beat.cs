@@ -9,12 +9,15 @@ public class Beat : MonoBehaviour {
 
 	private int counter;
 
+	public bool comboTime;
+
 	// Use this for initialization
 	void Start () {
 
 //		WAIT_TIME = 0.5f;
 //		SHOW_TIME = 0.5f;
 		counter = 0;
+		comboTime = false;
 
 		StartCoroutine (Wait());
 	
@@ -32,6 +35,7 @@ public class Beat : MonoBehaviour {
 		}
 
 		this.GetComponent<SpriteRenderer>().enabled = true;
+		comboTime = true;
 
 		counter++;
 		Debug.Log (counter);
@@ -47,6 +51,7 @@ public class Beat : MonoBehaviour {
 		}
 
 		this.GetComponent<SpriteRenderer>().enabled = false;
+		comboTime = false;
 
 		StartCoroutine (Wait ());
 
