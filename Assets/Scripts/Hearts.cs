@@ -1,5 +1,6 @@
 ﻿using UnityEngine;
 using System.Collections;
+using UnityEngine.SceneManagement;
 
 public class Hearts : MonoBehaviour {
 
@@ -33,6 +34,10 @@ public class Hearts : MonoBehaviour {
 	public void loseOneLife() {
 
 		Destroy (heartList[lives--]);
+        if(lives < 0)
+        {
+            SceneManager.LoadScene("Scenes/game_over");
+        }
 
 	}
 }
