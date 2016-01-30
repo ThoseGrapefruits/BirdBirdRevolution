@@ -1,0 +1,195 @@
+fileFormatVersion: 2
+guid: 8eade28a80c5f4863a62842f7454a30a
+timeCreated: 1454130252
+licenseType: Free
+TextureImporter:
+  fileIDToRecycleName:
+    21300000: MatchstickSpriteSheet_0
+    21300002: MatchstickSpriteSheet_1
+    21300004: MatchstickSpriteSheet_2
+    21300006: MatchstickSpriteSheet_3
+    21300008: MatchstickSpriteSheet_4
+    21300010: MatchstickSpriteSheet_5
+  serializedVersion: 2
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 1
+    linearTexture: 0
+    correctGamma: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+  isReadable: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 0
+  cubemapConvolution: 0
+  cubemapConvolutionSteps: 7
+  cubemapConvolutionExponent: 1.5
+  seamlessCubemap: 0
+  textureFormat: -1
+  maxTextureSize: 2048
+  textureSettings:
+    filterMode: -1
+    aniso: 16
+    mipBias: -1
+    wrapMode: 1
+  nPOTScale: 0
+  lightmap: 0
+  rGBM: 0
+  compressionQuality: 50
+  allowsAlphaSplitting: 0
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spritePixelsToUnits: 100
+  alphaIsTransparency: 1
+  textureType: 8
+  buildTargetSettings: []
+  spriteSheet:
+    sprites:
+    - name: MatchstickSpriteSheet_0
+      rect:
+        serializedVersion: 2
+        x: 51
+        y: 359
+        width: 24
+        height: 193
+      alignment: 9
+      pivot: {x: 0.5, y: 1.1}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+    - name: MatchstickSpriteSheet_1
+      rect:
+        serializedVersion: 2
+        x: 146
+        y: 294
+        width: 325
+        height: 436
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -162.5, y: 218}
+        - {x: -162.5, y: -218}
+        - {x: 162.5, y: -218}
+        - {x: 162.5, y: 218}
+    - name: MatchstickSpriteSheet_2
+      rect:
+        serializedVersion: 2
+        x: 508
+        y: 306
+        width: 244
+        height: 414
+      alignment: 9
+      pivot: {x: 0.3850663, y: 0.06937545}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: 91.04382, y: 195.27856}
+        - {x: 150.04382, y: 196.27856}
+        - {x: 150.04382, y: 214.27856}
+        - {x: 122.04382, y: 243.27856}
+        - {x: 101.04382, y: 264.27856}
+        - {x: 103.04382, y: 308.27856}
+        - {x: 86.04382, y: 345.27856}
+        - {x: 72.04382, y: 358.27856}
+        - {x: 48.043823, y: 377.27856}
+        - {x: 23.043823, y: 385.27856}
+        - {x: -7.9561768, y: 385.27856}
+        - {x: -17.956177, y: 384.27856}
+        - {x: -43.956177, y: 376.27856}
+        - {x: -75.95618, y: 349.27856}
+        - {x: -93.95618, y: 315.27856}
+        - {x: -93.95618, y: 261.27856}
+        - {x: -89.95618, y: 239.27856}
+        - {x: -62.956177, y: 184.27856}
+        - {x: -57.956177, y: 183.27856}
+        - {x: -57.956177, y: -27.721436}
+        - {x: -56.956177, y: -28.721436}
+        - {x: 64.04382, y: -28.721436}
+        - {x: 65.04382, y: -27.721436}
+        - {x: 65.04382, y: 183.27856}
+        - {x: 70.04382, y: 189.27856}
+    - name: MatchstickSpriteSheet_3
+      rect:
+        serializedVersion: 2
+        x: 35
+        y: 283
+        width: 57
+        height: 55
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -21.5, y: 27.5}
+        - {x: -28.5, y: 20.5}
+        - {x: -28.5, y: -15.5}
+        - {x: -23.5, y: -27.5}
+        - {x: 21.5, y: -27.5}
+        - {x: 28.5, y: -21.5}
+        - {x: 28.5, y: 18.5}
+        - {x: 22.5, y: 27.5}
+    - name: MatchstickSpriteSheet_4
+      rect:
+        serializedVersion: 2
+        x: 47
+        y: 45
+        width: 33
+        height: 216
+      alignment: 9
+      pivot: {x: 0.5, y: 1.1}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -14.5, y: -21.600006}
+        - {x: -16.5, y: -55.600006}
+        - {x: -16.5, y: -237.6}
+        - {x: 16.5, y: -237.6}
+        - {x: 16.5, y: -67.600006}
+        - {x: 15.5, y: -21.600006}
+    - name: MatchstickSpriteSheet_5
+      rect:
+        serializedVersion: 2
+        x: 126
+        y: 60
+        width: 411
+        height: 216
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: 165.5, y: -68}
+        - {x: 163.5, y: -59}
+        - {x: 158.5, y: -56}
+        - {x: 205.5, y: -21}
+        - {x: 205.5, y: -15}
+        - {x: 201.5, y: -12}
+        - {x: 141.5, y: 54}
+        - {x: 156.5, y: 80}
+        - {x: 163.5, y: 99}
+        - {x: 162.5, y: 108}
+        - {x: 146.5, y: 108}
+        - {x: 40.5, y: 83}
+        - {x: -83.5, y: 75}
+        - {x: -157.5, y: 96}
+        - {x: -175.5, y: 87}
+        - {x: -205.5, y: 65}
+        - {x: -205.5, y: -69}
+        - {x: -195.5, y: -96}
+        - {x: -168.5, y: -108}
+        - {x: -109.5, y: -108}
+        - {x: -44.5, y: -75}
+        - {x: 9.5, y: -94}
+        - {x: 75.5, y: -91}
+    outline: []
+  spritePackingTag: 
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
