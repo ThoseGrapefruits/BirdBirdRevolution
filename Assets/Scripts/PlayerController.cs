@@ -8,8 +8,9 @@ public class PlayerController : MonoBehaviour
     private GameObject theBeat;
 
     // Constants
-    private int OFF_BEAT_COMBO;
-    private int ON_BEAT_COMBO;
+    private const int OFF_BEAT_COMBO = 5;
+    private const int ON_BEAT_COMBO = 10;
+    private const int MAX_COMBO_SIZE = 4;
 
     // Glob variables
     public int score;
@@ -29,11 +30,6 @@ public class PlayerController : MonoBehaviour
         combos.Add("Wavedash Left", "LLD");
         combos.Add("Split", "DD");
 
-        // You get 5 points for landing a combo off-beat (subject to changes)
-        // You get 10 points for landing a combo on-beat (subject to changes)
-        OFF_BEAT_COMBO = 5;
-        ON_BEAT_COMBO = 10;
-
         // Duh, count your current score
         score = 0;
     }
@@ -42,19 +38,19 @@ public class PlayerController : MonoBehaviour
     {
         if (Input.GetButtonDown("Up"))
         {
-            activeCombo += Move.U;
+            AddMove(Move.U);
         }
         if (Input.GetButtonDown("Down"))
         {
-            activeCombo += Move.D;
+            AddMove(Move.D);
         }
         if (Input.GetButtonDown("Left"))
         {
-            activeCombo += Move.L;
+            AddMove(Move.L);
         }
         if (Input.GetButtonDown("Right"))
         {
-            activeCombo += Move.R;
+            AddMove(Move.R);
         }
         if (Input.GetKey(KeyCode.Space))
         {
@@ -64,7 +60,16 @@ public class PlayerController : MonoBehaviour
         CheckForCombo();
     }
 
-    private void CheckForCombo()
+    private void AddMove(Move move)
+    {
+        activeCombo += move;
+        if(!CheckForCombo()&&activeCombo.Length>=MAX_COMBO_SIZE)
+        {
+            ClearCombo();
+        }
+    }
+
+    private bool CheckForCombo()
     {
         foreach (string combo in combos.Values)
         {
@@ -72,8 +77,10 @@ public class PlayerController : MonoBehaviour
             if (combo.Equals(activeCombo))
             {
                 CompleteCombo(combo); // We made it boys
+                return true;
             }
         }
+        return false;
     }
 
     private void CompleteCombo(string combo)
@@ -96,5 +103,11 @@ public class PlayerController : MonoBehaviour
     private void ClearCombo()
     {
         activeCombo = "";
+        Debug.Log("Clearing combo");
+    }
+
+    public string GetActiveCombo()
+    {
+        return activeCombo;
     }
 }
