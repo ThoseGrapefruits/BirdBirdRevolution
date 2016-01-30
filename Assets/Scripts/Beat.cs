@@ -3,8 +3,8 @@ using System.Collections;
 
 public class Beat : MonoBehaviour {
 
-	private float WAIT_TIME;
-	private float SHOW_TIME;
+	public float WAIT_TIME;
+	public float SHOW_TIME;
 	private float timer;
 
 	private int counter;
@@ -12,8 +12,8 @@ public class Beat : MonoBehaviour {
 	// Use this for initialization
 	void Start () {
 
-		WAIT_TIME = 0.5f;
-		SHOW_TIME = 0.5f;
+//		WAIT_TIME = 0.5f;
+//		SHOW_TIME = 0.5f;
 		counter = 0;
 
 		StartCoroutine (Wait());
