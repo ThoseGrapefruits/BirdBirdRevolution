@@ -622,12 +622,12 @@ TextMesh:
   m_GameObject: {fileID: 1176596250}
   m_Text: Test
   m_OffsetZ: 0
-  m_CharacterSize: 0.1
+  m_CharacterSize: 0.014
   m_LineSpacing: 1
   m_Anchor: 1
   m_Alignment: 1
   m_TabSize: 4
-  m_FontSize: 15
+  m_FontSize: 100
   m_FontStyle: 0
   m_RichText: 1
   m_Font: {fileID: 12800000, guid: a5361c917e3c34af18b32a3234109c6a, type: 3}
@@ -741,6 +741,7 @@ GameObject:
   - 4: {fileID: 1239637626}
   - 212: {fileID: 1239637625}
   - 114: {fileID: 1239637627}
+  - 95: {fileID: 1239637628}
   m_Layer: 0
   m_Name: PlayerBird
   m_TagString: Untagged
@@ -785,7 +786,7 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1239637624}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0.35, y: -0.23, z: 0}
+  m_LocalPosition: {x: 0.326, y: -0.254, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 548731371}
@@ -805,6 +806,23 @@ MonoBehaviour:
   theBeat: {fileID: 597941643}
   flyText: {fileID: 170306, guid: 9398c1ff7c0454766b3b536c8f82f9a5, type: 2}
   ladyBirdComp: {fileID: 1669706814}
+--- !u!95 &1239637628
+Animator:
+  serializedVersion: 3
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1239637624}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 55b83f12449394558927615992806646, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
 --- !u!1 &1359090168
 GameObject:
   m_ObjectHideFlags: 0
