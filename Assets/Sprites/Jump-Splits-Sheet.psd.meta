@@ -1,0 +1,260 @@
+fileFormatVersion: 2
+guid: 20b8a8c0ec5a54c2699352fb77ae595d
+timeCreated: 1454216043
+licenseType: Free
+TextureImporter:
+  fileIDToRecycleName:
+    21300000: Jump-Splits-Sheet_0
+    21300002: Jump-Splits-Sheet_1
+    21300004: Jump-Splits-Sheet_2
+    21300006: Jump-Splits-Sheet_3
+    21300008: Jump-Splits-Sheet_4
+    21300010: Jump-Splits-Sheet_5
+    21300012: Jump-Splits-Sheet_6
+    21300014: Jump-Splits-Sheet_7
+    21300016: Jump-Splits-Sheet_8
+    21300018: Jump-Splits-Sheet_9
+  serializedVersion: 2
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 1
+    linearTexture: 0
+    correctGamma: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+  isReadable: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 0
+  cubemapConvolution: 0
+  cubemapConvolutionSteps: 7
+  cubemapConvolutionExponent: 1.5
+  seamlessCubemap: 0
+  textureFormat: -1
+  maxTextureSize: 2048
+  textureSettings:
+    filterMode: -1
+    aniso: 16
+    mipBias: -1
+    wrapMode: 1
+  nPOTScale: 0
+  lightmap: 0
+  rGBM: 0
+  compressionQuality: 50
+  allowsAlphaSplitting: 0
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spritePixelsToUnits: 100
+  alphaIsTransparency: 1
+  textureType: 8
+  buildTargetSettings: []
+  spriteSheet:
+    sprites:
+    - name: Jump-Splits-Sheet_0
+      rect:
+        serializedVersion: 2
+        x: 11
+        y: 302
+        width: 61
+        height: 46
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -24.5, y: 19}
+        - {x: -26.5, y: 18}
+        - {x: -26.5, y: 4}
+        - {x: -13.5, y: -23}
+        - {x: 18.5, y: -23}
+        - {x: 21.5, y: -15}
+        - {x: 21.5, y: 12}
+        - {x: 3.5, y: 19}
+    - name: Jump-Splits-Sheet_1
+      rect:
+        serializedVersion: 2
+        x: 35
+        y: 138
+        width: 52
+        height: 52
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -24, y: 21}
+        - {x: -24, y: 8}
+        - {x: -9, y: -20}
+        - {x: -8, y: -21}
+        - {x: 13, y: -21}
+        - {x: 24, y: -9}
+        - {x: 24, y: 17}
+        - {x: 3, y: 21}
+    - name: Jump-Splits-Sheet_2
+      rect:
+        serializedVersion: 2
+        x: 103
+        y: 130
+        width: 59
+        height: 62
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -22.5, y: 24}
+        - {x: -23.5, y: 23}
+        - {x: -23.5, y: 18}
+        - {x: -18.5, y: 4}
+        - {x: -13.5, y: -3}
+        - {x: -7.5, y: -17}
+        - {x: -5.5, y: -18}
+        - {x: 9.5, y: -18}
+        - {x: 24.5, y: 0}
+        - {x: 24.5, y: 17}
+        - {x: 6.5, y: 24}
+    - name: Jump-Splits-Sheet_3
+      rect:
+        serializedVersion: 2
+        x: 189
+        y: 132
+        width: 61
+        height: 58
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -25.5, y: 21}
+        - {x: -25.5, y: 4}
+        - {x: -13.5, y: -21}
+        - {x: 12.5, y: -21}
+        - {x: 22.5, y: -12}
+        - {x: 22.5, y: 13}
+        - {x: 21.5, y: 15}
+        - {x: -7.5, y: 21}
+    - name: Jump-Splits-Sheet_4
+      rect:
+        serializedVersion: 2
+        x: 82
+        y: 300
+        width: 61
+        height: 51
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: 22.5, y: 7.5}
+        - {x: 4.5, y: 14.5}
+        - {x: -25.5, y: 14.5}
+        - {x: -25.5, y: -1.5}
+        - {x: -10.5, y: -25.5}
+        - {x: 15.5, y: -25.5}
+        - {x: 23.5, y: -17.5}
+        - {x: 23.5, y: 4.5}
+    - name: Jump-Splits-Sheet_5
+      rect:
+        serializedVersion: 2
+        x: 158
+        y: 302
+        width: 58
+        height: 44
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -22, y: 12}
+        - {x: -25, y: 11}
+        - {x: -25, y: -3}
+        - {x: -17, y: -22}
+        - {x: 24, y: -22}
+        - {x: 24, y: 11}
+        - {x: 19, y: 12}
+    - name: Jump-Splits-Sheet_6
+      rect:
+        serializedVersion: 2
+        x: 234
+        y: 301
+        width: 70
+        height: 41
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: 3, y: 8.5}
+        - {x: -23, y: 8.5}
+        - {x: -24, y: 7.5}
+        - {x: -24, y: -2.5}
+        - {x: -17, y: -20.5}
+        - {x: 26, y: -20.5}
+        - {x: 26, y: -2.5}
+        - {x: 25, y: 4.5}
+    - name: Jump-Splits-Sheet_7
+      rect:
+        serializedVersion: 2
+        x: 13
+        y: 238
+        width: 57
+        height: 41
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -23.5, y: 13.5}
+        - {x: -26.5, y: 12.5}
+        - {x: -26.5, y: -1.5}
+        - {x: -18.5, y: -20.5}
+        - {x: 22.5, y: -20.5}
+        - {x: 22.5, y: 12.5}
+        - {x: 17.5, y: 13.5}
+    - name: Jump-Splits-Sheet_8
+      rect:
+        serializedVersion: 2
+        x: 82
+        y: 238
+        width: 61
+        height: 43
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: 5.5, y: 17.5}
+        - {x: -21.5, y: 17.5}
+        - {x: -24.5, y: 16.5}
+        - {x: -24.5, y: 3.5}
+        - {x: -12.5, y: -21.5}
+        - {x: 21.5, y: -21.5}
+        - {x: 24.5, y: -12.5}
+        - {x: 24.5, y: 5.5}
+        - {x: 23.5, y: 10.5}
+    - name: Jump-Splits-Sheet_9
+      rect:
+        serializedVersion: 2
+        x: 155
+        y: 238
+        width: 72
+        height: 43
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: 5, y: 21.5}
+        - {x: -21, y: 21.5}
+        - {x: -26, y: 18.5}
+        - {x: -26, y: 9.5}
+        - {x: -22, y: -1.5}
+        - {x: -9, y: -21.5}
+        - {x: 12, y: -21.5}
+        - {x: 22, y: -2.5}
+        - {x: 22, y: 11.5}
+    outline: []
+  spritePackingTag: 
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
