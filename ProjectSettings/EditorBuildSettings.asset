@@ -13,3 +13,6 @@ EditorBuildSettings:
     path: Assets/Scenes/Main_Menu.unity
   - enabled: 1
     path: Assets/Scenes/combo_list.unity
+=======
+    path: Assets/Scenes/test_scene_pls_delete.unity
+>>>>>>> animation
