@@ -11,19 +11,18 @@ public class Beat : MonoBehaviour {
 
 	private float timer;
 
-	private int counter;
-
 	public bool comboTime;
 
 	[SerializeField] private AudioClip blip;
 	private AudioSource sounds;
+
+	[SerializeField] private GameObject pulsator;
 
 	// Use this for initialization
 	void Start () {
 
 		generateRandomBeat();
 
-		counter = 0;
 		comboTime = false;
 
 		StartCoroutine (Wait());
@@ -44,12 +43,11 @@ public class Beat : MonoBehaviour {
 			yield return 0;
 		}
 
-		this.GetComponent<SpriteRenderer>().enabled = true;
 		comboTime = true;
 
 		sounds.PlayOneShot (blip);
 
-		counter++;
+		Instantiate(pulsator);
 
 		StartCoroutine (Show ());
 
@@ -61,7 +59,6 @@ public class Beat : MonoBehaviour {
 			yield return 0;
 		}
 
-		this.GetComponent<SpriteRenderer>().enabled = false;
 		comboTime = false;
 
 		StartCoroutine (Wait ());

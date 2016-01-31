@@ -14,6 +14,8 @@ public class PlayerController : MonoBehaviour
     private GameObject ladyBirdComp;
     private LadyBirdController ladyBird;
 
+	private Animator animator;
+
     // Constants
     private const int POINTS_PER_COMBO = 9;
     private const int COMBO_SIZE = 3;
@@ -48,6 +50,8 @@ public class PlayerController : MonoBehaviour
         score = 0;
 
         ladyBird = ladyBirdComp.GetComponent<LadyBirdController>();
+
+		animator = this.GetComponent<Animator>();
     }
 
     void Update()
@@ -107,6 +111,7 @@ public class PlayerController : MonoBehaviour
             SubScoreFor(combo);
             InstantiateComboText(false, activeCombo); // Make combo text
         }
+		setCorrectTrigger(combo);
         ClearCombo();
     }
 
@@ -137,4 +142,40 @@ public class PlayerController : MonoBehaviour
     {
         return activeCombo;
     }
+
+	private void setCorrectTrigger(string combo) {
+
+		switch (combo) {
+
+		case "LRL":
+			animator.SetTrigger("twirl");	
+			break;
+
+		case "RRD":
+			animator.SetTrigger("slideRight");
+			break;
+
+		case "LLD":
+			animator.SetTrigger("slideLeft");
+			break;
+
+		case "DDD":
+			animator.SetTrigger("splits");
+			break;
+
+		case "UUD":
+			animator.SetTrigger("jumpSplits");
+			break;
+
+		case "URD":
+			animator.SetTrigger("flipRight");
+			break;
+
+		case "ULD":
+			animator.SetTrigger("flipLeft");
+			break;
+
+		}
+
+	}
 }

@@ -1,0 +1,289 @@
+fileFormatVersion: 2
+guid: ab536688a0abb4a83a9262fddc656dd4
+timeCreated: 1454217209
+licenseType: Free
+TextureImporter:
+  fileIDToRecycleName:
+    21300000: Flip-SheetR_0
+    21300002: Flip-SheetR_1
+    21300004: Flip-SheetR_2
+    21300006: Flip-SheetR_3
+    21300008: Flip-SheetR_4
+    21300010: Flip-SheetR_5
+    21300012: Flip-SheetR_6
+    21300014: Flip-SheetR_7
+    21300016: Flip-SheetR_8
+    21300018: Flip-SheetR_9
+    21300020: Flip-SheetR_10
+  serializedVersion: 2
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 1
+    linearTexture: 0
+    correctGamma: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+  isReadable: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 0
+  cubemapConvolution: 0
+  cubemapConvolutionSteps: 7
+  cubemapConvolutionExponent: 1.5
+  seamlessCubemap: 0
+  textureFormat: -1
+  maxTextureSize: 2048
+  textureSettings:
+    filterMode: -1
+    aniso: 16
+    mipBias: -1
+    wrapMode: 1
+  nPOTScale: 0
+  lightmap: 0
+  rGBM: 0
+  compressionQuality: 50
+  allowsAlphaSplitting: 0
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spritePixelsToUnits: 100
+  alphaIsTransparency: 1
+  textureType: 8
+  buildTargetSettings: []
+  spriteSheet:
+    sprites:
+    - name: Flip-SheetR_0
+      rect:
+        serializedVersion: 2
+        x: 16
+        y: 249
+        width: 62
+        height: 52
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: 6, y: 17}
+        - {x: -22, y: 17}
+        - {x: -24, y: 16}
+        - {x: -24, y: 3}
+        - {x: -20, y: -6}
+        - {x: -7, y: -26}
+        - {x: 10, y: -26}
+        - {x: 12, y: -25}
+        - {x: 24, y: -7}
+        - {x: 24, y: 5}
+    - name: Flip-SheetR_1
+      rect:
+        serializedVersion: 2
+        x: 87
+        y: 244
+        width: 65
+        height: 57
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -24.5, y: 18.5}
+        - {x: -24.5, y: -2.5}
+        - {x: -13.5, y: -21.5}
+        - {x: 16.5, y: -21.5}
+        - {x: 23.5, y: -15.5}
+        - {x: 23.5, y: 11.5}
+        - {x: 6.5, y: 18.5}
+    - name: Flip-SheetR_2
+      rect:
+        serializedVersion: 2
+        x: 159
+        y: 235
+        width: 48
+        height: 64
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -19, y: 29}
+        - {x: -21, y: 23}
+        - {x: -21, y: -9}
+        - {x: -15, y: -16}
+        - {x: 9, y: -16}
+        - {x: 23, y: -10}
+        - {x: 23, y: 17}
+        - {x: -1, y: 29}
+    - name: Flip-SheetR_3
+      rect:
+        serializedVersion: 2
+        x: 218
+        y: 232
+        width: 51
+        height: 75
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -22.5, y: -24.5}
+        - {x: -22.5, y: -21.5}
+        - {x: -25.5, y: -20.5}
+        - {x: -25.5, y: -25.5}
+      - - {x: -6.5, y: 33.5}
+        - {x: -8.5, y: 32.5}
+        - {x: -21.5, y: 25.5}
+        - {x: -21.5, y: -3.5}
+        - {x: -12.5, y: -16.5}
+        - {x: 13.5, y: -16.5}
+        - {x: 18.5, y: -12.5}
+        - {x: 18.5, y: 22.5}
+        - {x: 15.5, y: 33.5}
+    - name: Flip-SheetR_4
+      rect:
+        serializedVersion: 2
+        x: 281
+        y: 228
+        width: 61
+        height: 82
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -20.5, y: 27}
+        - {x: -20.5, y: -18}
+        - {x: 4.5, y: -18}
+        - {x: 23.5, y: -6}
+        - {x: 23.5, y: 16}
+        - {x: 22.5, y: 22}
+        - {x: 13.5, y: 27}
+    - name: Flip-SheetR_5
+      rect:
+        serializedVersion: 2
+        x: 6
+        y: 122
+        width: 60
+        height: 91
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -7, y: 37.5}
+        - {x: -17, y: 34.5}
+        - {x: -26, y: 24.5}
+        - {x: -26, y: 5.5}
+        - {x: -20, y: -1.5}
+        - {x: 14, y: -1.5}
+        - {x: 18, y: -0.5}
+        - {x: 23, y: 5.5}
+        - {x: 23, y: 26.5}
+        - {x: 15, y: 37.5}
+    - name: Flip-SheetR_6
+      rect:
+        serializedVersion: 2
+        x: 78
+        y: 134
+        width: 54
+        height: 79
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -5, y: 30.5}
+        - {x: -11, y: 28.5}
+        - {x: -18, y: 25.5}
+        - {x: -18, y: 8.5}
+        - {x: -10, y: -10.5}
+        - {x: 3, y: -14.5}
+        - {x: 14, y: -14.5}
+        - {x: 24, y: -8.5}
+        - {x: 24, y: 24.5}
+        - {x: 22, y: 30.5}
+    - name: Flip-SheetR_7
+      rect:
+        serializedVersion: 2
+        x: 151
+        y: 142
+        width: 54
+        height: 72
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: 8, y: 32}
+        - {x: -13, y: 32}
+        - {x: -13, y: -8}
+        - {x: -8, y: -15}
+        - {x: 19, y: -15}
+        - {x: 23, y: -4}
+        - {x: 23, y: 23}
+        - {x: 21, y: 25}
+    - name: Flip-SheetR_8
+      rect:
+        serializedVersion: 2
+        x: 229
+        y: 144
+        width: 52
+        height: 68
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: 23, y: 20}
+        - {x: 21, y: 23}
+        - {x: 2, y: 23}
+        - {x: -17, y: 15}
+        - {x: -18, y: 10}
+        - {x: -18, y: -12}
+        - {x: -9, y: -18}
+        - {x: -5, y: -17}
+        - {x: -3, y: -18}
+        - {x: 23, y: -18}
+    - name: Flip-SheetR_9
+      rect:
+        serializedVersion: 2
+        x: 293
+        y: 155
+        width: 63
+        height: 54
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -23.5, y: 20}
+        - {x: -23.5, y: -1}
+        - {x: -12.5, y: -20}
+        - {x: 17.5, y: -20}
+        - {x: 24.5, y: -14}
+        - {x: 24.5, y: 13}
+        - {x: 7.5, y: 20}
+    - name: Flip-SheetR_10
+      rect:
+        serializedVersion: 2
+        x: 12
+        y: 60
+        width: 66
+        height: 51
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: 2, y: 18.5}
+        - {x: -20, y: 18.5}
+        - {x: -24, y: 16.5}
+        - {x: -24, y: 1.5}
+        - {x: -21, y: -5.5}
+        - {x: -9, y: -25.5}
+        - {x: 14, y: -25.5}
+        - {x: 24, y: -12.5}
+        - {x: 24, y: 3.5}
+        - {x: 22, y: 7.5}
+    outline: []
+  spritePackingTag: 
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
