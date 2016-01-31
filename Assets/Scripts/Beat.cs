@@ -16,6 +16,8 @@ public class Beat : MonoBehaviour {
 	[SerializeField] private AudioClip blip;
 	private AudioSource sounds;
 
+	[SerializeField] private GameObject pulsator;
+
 	// Use this for initialization
 	void Start () {
 
@@ -44,6 +46,8 @@ public class Beat : MonoBehaviour {
 		comboTime = true;
 
 		sounds.PlayOneShot (blip);
+
+		Instantiate(pulsator);
 
 		StartCoroutine (Show ());
 
