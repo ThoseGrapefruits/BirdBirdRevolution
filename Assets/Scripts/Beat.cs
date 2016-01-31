@@ -11,8 +11,6 @@ public class Beat : MonoBehaviour {
 
 	private float timer;
 
-	private int counter;
-
 	public bool comboTime;
 
 	[SerializeField] private AudioClip blip;
@@ -23,7 +21,6 @@ public class Beat : MonoBehaviour {
 
 		generateRandomBeat();
 
-		counter = 0;
 		comboTime = false;
 
 		StartCoroutine (Wait());
@@ -44,12 +41,9 @@ public class Beat : MonoBehaviour {
 			yield return 0;
 		}
 
-		this.GetComponent<SpriteRenderer>().enabled = true;
 		comboTime = true;
 
 		sounds.PlayOneShot (blip);
-
-		counter++;
 
 		StartCoroutine (Show ());
 
@@ -61,7 +55,6 @@ public class Beat : MonoBehaviour {
 			yield return 0;
 		}
 
-		this.GetComponent<SpriteRenderer>().enabled = false;
 		comboTime = false;
 
 		StartCoroutine (Wait ());
